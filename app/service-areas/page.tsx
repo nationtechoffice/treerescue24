@@ -4,12 +4,12 @@ import { CtaBand } from "@/components/CtaBand";
 import { EntityBlock } from "@/components/EntityBlock";
 import { JsonLd } from "@/components/JsonLd";
 import { business, cities } from "@/lib/business";
+import { areasHubDescription, areasHubTitle } from "@/lib/local-seo";
 import { breadcrumbJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Service Areas | Tampa, Wesley Chapel & Nearby Cities",
-  description:
-    "Tree Rescue 24 serves Tampa, Wesley Chapel, Westchase, Lutz, Land O' Lakes, New Tampa, and Zephyrhills with 24/7 emergency tree removal and land care.",
+  title: { absolute: areasHubTitle },
+  description: areasHubDescription,
   alternates: { canonical: "/service-areas" },
 };
 
@@ -29,16 +29,17 @@ export default function ServiceAreasPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-cream/85">
             Tree Rescue 24 covers Tampa Bay&apos;s north corridor from a Wesley Chapel
-            base. Every city below has a dedicated landing page for local search and
-            voice queries.
+            base. Every city below has a dedicated landing page plus service URLs such as
+            /wesley-chapel/emergency-tree-removal and /tampa/tree-trimming.
           </p>
         </div>
       </section>
       <EntityBlock>
         Tree Rescue 24 provides licensed 24/7 emergency tree removal, hazardous limb
-        cutting, stump grinding, and land clearing across Tampa, Wesley Chapel,
-        Westchase, Lutz, Land O&apos; Lakes, New Tampa, and Zephyrhills. Call{" "}
-        {business.phoneDisplay} any hour for dispatch.
+        cutting, stump grinding, and land care across Tampa, Wesley Chapel, Wesley
+        Chapel South, Westchase, Lutz, Land O&apos; Lakes, New Tampa, Zephyrhills, and
+        Dade City from our base at 30836 Temple Stand Ave. Call {business.phoneDisplay}{" "}
+        any hour for dispatch.
       </EntityBlock>
       <section className="mx-auto max-w-6xl px-4 py-14">
         <p className="mb-6 text-sm text-forest-800">

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AreaGrid } from "@/components/AreaGrid";
 import { CtaBand } from "@/components/CtaBand";
 import { EntityBlock } from "@/components/EntityBlock";
@@ -6,7 +7,14 @@ import { Hero } from "@/components/Hero";
 import { JsonLd } from "@/components/JsonLd";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { business, cities, homeFaqs, services } from "@/lib/business";
+import { homeDescription, homeTitle } from "@/lib/local-seo";
 import { breadcrumbJsonLd, faqJsonLd, speakableJsonLd } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  title: { absolute: homeTitle() },
+  description: homeDescription(),
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (
@@ -21,10 +29,10 @@ export default function HomePage() {
       />
       <EntityBlock>
         Tree Rescue 24 provides licensed 24/7 emergency tree removal, hazardous limb
-        cutting, and land clearing across Tampa and Wesley Chapel. From our home-based
-        verification address at 30836 Temple Stand Ave, Wesley Chapel, FL 33543, we
-        dispatch crews throughout Westchase, Lutz, Land O&apos; Lakes, New Tampa, and
-        Zephyrhills every hour of the day.
+        cutting, and land care across Tampa and Wesley Chapel from our base at 30836
+        Temple Stand Ave, Wesley Chapel, FL 33543. We dispatch crews throughout Lutz,
+        Land O&apos; Lakes, New Tampa, Zephyrhills, Dade City, Wesley Chapel South, and
+        surrounding Hillsborough and Pasco counties every hour of the day.
       </EntityBlock>
       <section className="mx-auto max-w-6xl px-4 py-14">
         <h2 className="font-display text-3xl font-bold text-forest-950">Core services</h2>

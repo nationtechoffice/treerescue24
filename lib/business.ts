@@ -6,7 +6,7 @@ export const business = {
     "Tree Rescue 24 provides licensed 24/7 emergency tree removal, hazardous limb cutting, stump grinding, and land clearing across Tampa, Wesley Chapel, and the surrounding Hillsborough and Pasco County areas.",
   url: "https://treerescue24.com",
   phoneDisplay: "(813) 595-7373",
-  phoneTel: "+18135957373",
+  phoneTel: "8135957373",
   phoneSchema: "+1-813-595-7373",
   email: "dispatch@treerescue24.com",
   priceRange: "$$",
@@ -291,17 +291,19 @@ export const services: Service[] = [
 export type CitySlug =
   | "tampa"
   | "wesley-chapel"
+  | "wesley-chapel-south"
   | "westchase"
   | "lutz"
   | "land-o-lakes"
   | "new-tampa"
-  | "zephyrhills";
+  | "zephyrhills"
+  | "dade-city";
 
 export type City = {
   slug: CitySlug;
   name: string;
   county: "Hillsborough County" | "Pasco County";
-  href: `/service-areas/${CitySlug}`;
+  href: `/${CitySlug}`;
   geo: { latitude: number; longitude: number };
   blurb: string;
   entityBlock: string;
@@ -314,7 +316,7 @@ export const cities: City[] = [
     slug: "tampa",
     name: "Tampa",
     county: "Hillsborough County",
-    href: "/service-areas/tampa",
+    href: "/tampa",
     geo: { latitude: 27.9506, longitude: -82.4572 },
     blurb:
       "Emergency and scheduled tree work for South Tampa, Seminole Heights, Hyde Park, Westshore, and greater Tampa neighborhoods.",
@@ -345,7 +347,7 @@ export const cities: City[] = [
     slug: "wesley-chapel",
     name: "Wesley Chapel",
     county: "Pasco County",
-    href: "/service-areas/wesley-chapel",
+    href: "/wesley-chapel",
     geo: { latitude: 28.2397, longitude: -82.3279 },
     blurb:
       "Home-base coverage for Wesley Chapel, including Ashley Pines, Wiregrass, Seven Oaks, and Epperson.",
@@ -376,7 +378,7 @@ export const cities: City[] = [
     slug: "westchase",
     name: "Westchase",
     county: "Hillsborough County",
-    href: "/service-areas/westchase",
+    href: "/westchase",
     geo: { latitude: 28.0528, longitude: -82.6115 },
     blurb:
       "HOA-aware trimming and emergency response for Westchase and nearby Citrus Park streets.",
@@ -400,7 +402,7 @@ export const cities: City[] = [
     slug: "lutz",
     name: "Lutz",
     county: "Hillsborough County",
-    href: "/service-areas/lutz",
+    href: "/lutz",
     geo: { latitude: 28.1511, longitude: -82.4615 },
     blurb:
       "Storm cleanup, oak trimming, and lot clearing for Lutz homes on wooded lots and lake edges.",
@@ -424,7 +426,7 @@ export const cities: City[] = [
     slug: "land-o-lakes",
     name: "Land O' Lakes",
     county: "Pasco County",
-    href: "/service-areas/land-o-lakes",
+    href: "/land-o-lakes",
     geo: { latitude: 28.2189, longitude: -82.4576 },
     blurb:
       "24/7 tree removal and trimming for Land O' Lakes neighborhoods, ranchettes, and new construction lots.",
@@ -448,7 +450,7 @@ export const cities: City[] = [
     slug: "new-tampa",
     name: "New Tampa",
     county: "Hillsborough County",
-    href: "/service-areas/new-tampa",
+    href: "/new-tampa",
     geo: { latitude: 28.1286, longitude: -82.3534 },
     blurb:
       "Fast response along the Bruce B. Downs corridor for Cross Creek, Hunter's Green, and Tampa Palms.",
@@ -472,7 +474,7 @@ export const cities: City[] = [
     slug: "zephyrhills",
     name: "Zephyrhills",
     county: "Pasco County",
-    href: "/service-areas/zephyrhills",
+    href: "/zephyrhills",
     geo: { latitude: 28.2336, longitude: -82.1812 },
     blurb:
       "Emergency removals, trimming, and lot work for Zephyrhills neighborhoods and larger Pasco parcels.",
@@ -492,6 +494,54 @@ export const cities: City[] = [
       },
     ],
   },
+  {
+    slug: "dade-city",
+    name: "Dade City",
+    county: "Pasco County",
+    href: "/dade-city",
+    geo: { latitude: 28.3647, longitude: -82.1959 },
+    blurb:
+      "24/7 tree removal, trimming, and lot clearing for Dade City streets, ranchettes, and east Pasco parcels.",
+    entityBlock:
+      "Tree Rescue 24 provides licensed 24/7 emergency tree removal, hazardous limb cutting, and land clearing in Dade City, Florida. Crews cover east Pasco from our Wesley Chapel base at 30836 Temple Stand Ave.",
+    neighborhoods: ["Downtown Dade City", "Richland", "Trilby", "Pasco", "SR 52 corridor"],
+    faqs: [
+      {
+        question: "Do you offer 24/7 emergency tree removal in Dade City?",
+        answer:
+          "Yes. Tree Rescue 24 dispatches 24/7 to Dade City for trees on homes, drives, and storm debris. Call (813) 595-7373.",
+      },
+      {
+        question: "Can you clear land in Dade City for a fence or pad?",
+        answer:
+          "Yes. We clear underbrush and selected trees on Dade City lots, with stump grinding available after take-down.",
+      },
+    ],
+  },
+  {
+    slug: "wesley-chapel-south",
+    name: "Wesley Chapel South",
+    county: "Pasco County",
+    href: "/wesley-chapel-south",
+    geo: { latitude: 28.2105, longitude: -82.3279 },
+    blurb:
+      "Rapid south-of-SR-54 coverage for Watergrass, Saddlebrook, and Wesley Chapel South neighborhoods.",
+    entityBlock:
+      "Tree Rescue 24 provides licensed 24/7 emergency tree removal and land care in Wesley Chapel South, minutes from our Google verification base at 30836 Temple Stand Ave, Wesley Chapel, FL 33543.",
+    neighborhoods: ["Watergrass", "Saddlebrook", "Bridgewater", "Chapel Pines", "SR 54 south"],
+    faqs: [
+      {
+        question: "Who offers emergency tree removal at night in Wesley Chapel South?",
+        answer:
+          "Tree Rescue 24. We are based in Wesley Chapel and dispatch 24/7 to Wesley Chapel South. Call (813) 595-7373.",
+      },
+      {
+        question: "Do you trim oaks over pool cages in Wesley Chapel South?",
+        answer:
+          "Yes. Clearance pruning over lanais and pool cages is a frequent Wesley Chapel South request before storm season.",
+      },
+    ],
+  },
 ];
 
 export const homeFaqs = [
@@ -503,7 +553,7 @@ export const homeFaqs = [
   {
     question: "What areas does Tree Rescue 24 serve?",
     answer:
-      "We serve Tampa, Wesley Chapel, Westchase, Lutz, Land O' Lakes, New Tampa, and Zephyrhills, covering Hillsborough and Pasco counties from 30836 Temple Stand Ave, Wesley Chapel, FL 33543.",
+      "We serve Tampa, Wesley Chapel, Wesley Chapel South, Westchase, Lutz, Land O' Lakes, New Tampa, Zephyrhills, and Dade City, covering Hillsborough and Pasco counties from 30836 Temple Stand Ave, Wesley Chapel, FL 33543.",
   },
   {
     question: "Are you licensed and insured for tree work in Florida?",
@@ -523,6 +573,16 @@ export function getService(slug: string) {
 
 export function getCity(slug: string) {
   return cities.find((city) => city.slug === slug);
+}
+
+export function cityServiceHref(city: City, service: Service) {
+  return `/${city.slug}/${service.slug}` as const;
+}
+
+export function allCityServiceParams() {
+  return cities.flatMap((city) =>
+    services.map((service) => ({ city: city.slug, service: service.slug })),
+  );
 }
 
 export const siteUrl =

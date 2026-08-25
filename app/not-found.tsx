@@ -3,7 +3,7 @@ import Link from "next/link";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Page not found",
+  title: { absolute: "Page not found | Tree Rescue 24" },
 };
 
 export default function NotFound() {

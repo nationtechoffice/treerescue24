@@ -16,7 +16,7 @@ export function CtaBand({
         </div>
         <a
           href={`tel:${business.phoneTel}`}
-          className="inline-flex h-14 shrink-0 items-center rounded-full bg-forest-950 px-6 font-display text-lg font-bold hover:bg-forest-800"
+          className="inline-flex h-12 min-h-12 min-w-12 shrink-0 items-center justify-center rounded-full bg-forest-950 px-6 font-display text-lg font-bold hover:bg-forest-800"
           aria-label="Call Now - 24/7 Emergency"
         >
           Call {business.phoneDisplay}

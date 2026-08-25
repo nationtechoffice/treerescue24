@@ -5,7 +5,14 @@ import { CtaBand } from "@/components/CtaBand";
 import { EntityBlock } from "@/components/EntityBlock";
 import { FaqList } from "@/components/FaqList";
 import { JsonLd } from "@/components/JsonLd";
-import { business, cities, getCity, services } from "@/lib/business";
+import {
+  business,
+  cities,
+  cityServiceHref,
+  getCity,
+  services,
+} from "@/lib/business";
+import { cityDescription, cityTitle } from "@/lib/local-seo";
 import { breadcrumbJsonLd, cityJsonLd, faqJsonLd } from "@/lib/schema";
 
 type Props = { params: Promise<{ city: string }> };
@@ -21,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCity(slug);
   if (!city) return {};
   return {
-    title: `24/7 Tree Service in ${city.name}, FL`,
-    description: city.entityBlock,
+    title: { absolute: cityTitle(city) },
+    description: cityDescription(city),
     alternates: { canonical: city.href },
   };
 }
@@ -48,16 +55,16 @@ export default async function CityPage({ params }: Props) {
           <p className="text-xs font-bold tracking-[0.2em] text-gold uppercase">
             {city.county} · 24/7 dispatch
           </p>
-          <h1 className="mt-3 font-display text-4xl font-bold md:text-5xl">
-            Emergency tree service in {city.name}, Florida
+          <h1 className="speakable-headline mt-3 font-display text-4xl font-bold md:text-5xl">
+            24/7 emergency tree service in {city.name}
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-cream/85">{city.blurb}</p>
+          <p className="speakable-lede mt-4 max-w-2xl text-lg text-cream/85">{city.blurb}</p>
           <a
             href={`tel:${business.phoneTel}`}
-            className="mt-8 inline-flex h-14 items-center rounded-full bg-orange-500 px-6 font-display text-lg font-bold"
+            className="mt-8 inline-flex min-h-12 min-w-12 items-center rounded-full bg-orange-500 px-6 font-display text-lg font-bold"
             aria-label="Call Now - 24/7 Emergency"
           >
-            Call {business.phoneDisplay}
+            Call Now - 24/7 Emergency
           </a>
         </div>
       </section>
@@ -77,13 +84,13 @@ export default async function CityPage({ params }: Props) {
           ))}
         </ul>
         <h2 className="mt-12 font-display text-3xl font-bold text-forest-950">
-          Services available in {city.name}
+          {city.name} services
         </h2>
         <ul className="mt-6 grid gap-3 md:grid-cols-2">
           {services.map((service) => (
             <li key={service.slug}>
               <Link
-                href={service.href}
+                href={cityServiceHref(city, service)}
                 className="block rounded-2xl border border-forest-900/10 bg-white p-5 hover:border-orange-400"
               >
                 <span className="font-display text-xl font-bold text-forest-950">

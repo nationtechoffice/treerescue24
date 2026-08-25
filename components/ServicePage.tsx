@@ -6,16 +6,17 @@ import { FaqList } from "@/components/FaqList";
 import { JsonLd } from "@/components/JsonLd";
 import type { Service } from "@/lib/business";
 import { business } from "@/lib/business";
+import { serviceDescription, serviceTitle } from "@/lib/local-seo";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/schema";
 
 export function serviceMetadata(service: Service): Metadata {
   return {
-    title: `${service.name} in Tampa & Wesley Chapel`,
-    description: service.entityBlock,
+    title: { absolute: serviceTitle(service) },
+    description: serviceDescription(service),
     alternates: { canonical: service.href },
     openGraph: {
-      title: `${service.name} | Tree Rescue 24`,
-      description: service.summary,
+      title: serviceTitle(service),
+      description: serviceDescription(service),
       url: service.href,
     },
   };
@@ -43,7 +44,7 @@ export function ServicePage({ service }: { service: Service }) {
           <p className="speakable-lede mt-4 max-w-2xl text-lg text-cream/85">{service.intro}</p>
           <a
             href={`tel:${business.phoneTel}`}
-            className="mt-8 inline-flex h-14 items-center rounded-full bg-orange-500 px-6 font-display text-lg font-bold text-white"
+            className="mt-8 inline-flex min-h-12 min-w-12 items-center rounded-full bg-orange-500 px-6 font-display text-lg font-bold text-white"
             aria-label="Call Now - 24/7 Emergency"
           >
             Call Now - 24/7 Emergency

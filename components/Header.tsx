@@ -54,7 +54,7 @@ export function Header() {
 
         <a
           href={`tel:${business.phoneTel}`}
-          className="hidden shrink-0 rounded-full bg-orange-500 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-orange-950/40 hover:bg-orange-400 md:inline-flex"
+          className="hidden h-12 min-h-12 min-w-12 shrink-0 items-center rounded-full bg-orange-500 px-4 text-sm font-bold text-white shadow-lg shadow-orange-950/40 hover:bg-orange-400 md:inline-flex"
           aria-label={`Call Tree Rescue 24 at ${business.phoneDisplay}`}
         >
           {business.phoneDisplay}
@@ -62,7 +62,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/15 text-cream lg:hidden"
+          className="inline-flex h-12 w-12 min-h-12 min-w-12 items-center justify-center rounded-md border border-white/15 text-cream lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -97,7 +97,7 @@ export function Header() {
           ))}
           <a
             href={`tel:${business.phoneTel}`}
-            className="mt-2 rounded-full bg-orange-500 px-4 py-3 text-center text-base font-bold text-white"
+            className="mt-2 inline-flex min-h-12 min-w-12 items-center justify-center rounded-full bg-orange-500 px-4 py-3 text-center text-base font-bold text-white"
             aria-label={`Call Now - 24/7 Emergency, ${business.phoneDisplay}`}
             onClick={() => setOpen(false)}
           >

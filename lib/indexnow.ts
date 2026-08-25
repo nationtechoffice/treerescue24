@@ -5,13 +5,10 @@ export const indexNowKey = process.env.INDEXNOW_KEY || business.indexNowKey;
 export function allIndexUrls() {
   const paths = [
     "/",
-    "/emergency-tree-removal",
-    "/tree-trimming",
-    "/stump-grinding",
-    "/land-clearing",
     "/service-areas",
     ...services.map((service) => service.href),
     ...cities.map((city) => city.href),
+    ...cities.flatMap((city) => services.map((service) => `/${city.slug}/${service.slug}`)),
   ];
   return [...new Set(paths)].map((path) => `${siteUrl}${path === "/" ? "/" : path}`);
 }

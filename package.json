@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate:print-images": "node scripts/generate-print-images.mjs"
+    "generate:print-images": "node scripts/generate-print-images.mjs",
+    "generate:hero-images": "node scripts/generate-hero-images.mjs"
   },
   "dependencies": {
     "next": "16.3.2",

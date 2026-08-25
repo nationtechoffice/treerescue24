@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { business, siteUrl } from "@/lib/business";
+import { homeDescription, homeTitle } from "@/lib/local-seo";
 import { localBusinessGraph } from "@/lib/schema";
 import "./globals.css";
 
@@ -24,10 +25,10 @@ const sourceSans = Source_Sans_3({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Tree Rescue 24 | 24/7 Emergency Tree Service in Tampa & Wesley Chapel",
-    template: "%s | Tree Rescue 24",
+    default: homeTitle(),
+    template: "%s",
   },
-  description: business.description,
+  description: homeDescription(),
   applicationName: business.name,
   keywords: [
     "emergency tree removal Tampa",
@@ -46,15 +47,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: business.name,
-    title: "Tree Rescue 24 | 24/7 Emergency Tree Service",
-    description: business.description,
-    images: [{ url: "/brand/treerescue24-logo.png", width: 1024, height: 1024, alt: "Tree Rescue 24 logo" }],
+    title: homeTitle(),
+    description: homeDescription(),
+    images: [
+      {
+        url: "/images/hero-emergency-crane.png",
+        width: 1536,
+        height: 1024,
+        alt: "Tree Rescue 24 emergency crane removing a storm-damaged tree",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: "Tree Rescue 24 | 24/7 Emergency Tree Service",
-    description: business.description,
-    images: ["/brand/treerescue24-logo.png"],
+    card: "summary_large_image",
+    title: homeTitle(),
+    description: homeDescription(),
+    images: ["/images/hero-emergency-crane.png"],
   },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,

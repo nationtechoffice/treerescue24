@@ -202,6 +202,56 @@ export function cityJsonLd(city: City) {
   };
 }
 
+export function cityServiceJsonLd(city: City, service: Service) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `${service.name} in ${city.name}`,
+    url: `${siteUrl}/${city.slug}/${service.slug}`,
+    description: `Tree Rescue 24 provides licensed 24/7 ${service.name.toLowerCase()} in ${city.name}, ${city.county}.`,
+    provider: {
+      "@type": ["EmergencyService", "HomeAndConstructionBusiness"],
+      name: business.name,
+      telephone: business.phoneSchema,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: business.address.street,
+        addressLocality: business.address.city,
+        addressRegion: business.address.region,
+        postalCode: business.address.postalCode,
+        addressCountry: business.address.country,
+      },
+    },
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: city.county,
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: city.geo.latitude,
+        longitude: city.geo.longitude,
+      },
+    },
+    hoursAvailable: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "00:00",
+      closes: "23:59",
+    },
+  };
+}
+
 export function speakableJsonLd(cssSelectors: string[]) {
   return {
     "@context": "https://schema.org",

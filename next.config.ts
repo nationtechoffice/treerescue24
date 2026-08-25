@@ -20,6 +20,10 @@ const nextConfig: NextConfig = {
         source: "/brand/:path*",
         headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
+      {
+        source: "/images/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
     ];
   },
   async redirects() {
@@ -27,6 +31,11 @@ const nextConfig: NextConfig = {
       {
         source: "/home",
         destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/service-areas/:city",
+        destination: "/:city",
         permanent: true,
       },
       {

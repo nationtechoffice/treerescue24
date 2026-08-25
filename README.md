@@ -13,7 +13,9 @@ Premier 24/7 emergency tree service, tree removal, and land care for Tampa, Wesl
 - `/tree-trimming`
 - `/stump-grinding`
 - `/land-clearing`
-- `/service-areas` plus city landings for Tampa, Wesley Chapel, Westchase, Lutz, Land O' Lakes, New Tampa, and Zephyrhills
+- `/service-areas` hub
+- City hubs: `/tampa`, `/wesley-chapel`, `/wesley-chapel-south`, `/westchase`, `/lutz`, `/land-o-lakes`, `/new-tampa`, `/zephyrhills`, `/dade-city`
+- City + service landings: `/{city}/{service}` (e.g. `/wesley-chapel/emergency-tree-removal`, `/tampa/tree-trimming`, `/lutz/stump-grinding`)
 
 ## SEO / indexing
 
@@ -35,12 +37,16 @@ PNG files for Google verification, receipts, cards, and truck magnets live in `p
 - `print-assets/treerescue24-receipt.png`
 - `print-assets/treerescue24-business-card.png`
 - `print-assets/treerescue24-magnetic-sign.png`
+- `print-assets/hero-emergency-crane.png` and `print-assets/hero-arborists.png` (exported from homepage heroes)
 
 Regenerate:
 
 ```bash
 npm run generate:print-images
+npm run generate:hero-images
 ```
+
+Homepage heroes served on the site live in `public/images/`.
 
 ## Development
 
