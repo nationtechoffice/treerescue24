@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-forest-950: #06261c;
+  --color-forest-900: #0b3d2e;
+  --color-forest-800: #14532d;
+  --color-orange-400: #ff8533;
+  --color-orange-500: #ff6a00;
+  --color-orange-600: #e85d04;
+  --color-orange-700: #c2410c;
+  --color-gold: #f5c518;
+  --color-cream: #f6f1e8;
+  --color-cream-100: #fbf8f2;
+  --color-ink: #10231c;
+  --font-sans: var(--font-source);
+  --font-display: var(--font-barlow);
+}
+
+html {
+  background: #06261c;
+}
+
+body {
+  background: var(--color-cream-100);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+.hero-grid {
+  background-image:
+    radial-gradient(circle at 18% 20%, rgba(255, 106, 0, 0.22), transparent 32%),
+    radial-gradient(circle at 88% 80%, rgba(245, 197, 24, 0.12), transparent 28%),
+    linear-gradient(rgba(246, 241, 232, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(246, 241, 232, 0.045) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    44px 44px,
+    44px 44px;
+}
+
+@media print {
+  header,
+  footer,
+  [aria-label="24/7 emergency call bar"],
+  .print\:hidden {
+    display: none !important;
+  }
+}

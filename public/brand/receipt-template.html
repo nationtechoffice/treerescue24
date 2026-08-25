@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tree Rescue 24 Customer Receipt</title>
+  <style>
+    @page { size: letter; margin: 0.5in; }
+    body { font-family: Arial, Helvetica, sans-serif; color: #10231C; margin: 0; }
+    header { display: flex; justify-content: space-between; border-bottom: 6px solid #FF6A00; padding-bottom: 12px; }
+    h1 { margin: 0; color: #0B3D2E; }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+    th { background: #06261C; color: #F6F1E8; text-align: left; padding: 8px; }
+    td { border-bottom: 1px solid #d5d0c6; height: 36px; padding: 8px; }
+    .totals { width: 240px; margin-left: auto; }
+    .sign { display: flex; gap: 40px; margin-top: 48px; }
+    .sign p { flex: 1; border-top: 1px solid #10231C; padding-top: 8px; }
+    footer { margin-top: 28px; font-size: 12px; color: #14532D; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="./treerescue24-logo.svg" alt="Tree Rescue 24" width="96" height="96" />
+      <h1>Tree Rescue 24</h1>
+      <p>30836 Temple Stand Ave, Wesley Chapel, FL 33543<br />(813) 595-7373 · treerescue24.com<br />Open 24 hours, 7 days a week</p>
+    </div>
+    <div>
+      <h2>Customer Receipt</h2>
+      <p>Invoice # ____________<br />Date ____________</p>
+    </div>
+  </header>
+  <p><strong>Bill to:</strong> ________________________________<br />
+  <strong>Service address:</strong> ________________________________</p>
+  <table>
+    <thead>
+      <tr><th>Service</th><th>Qty</th><th>Rate</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Emergency tree removal / make-safe</td><td></td><td></td><td></td></tr>
+      <tr><td>Tree trimming / canopy work</td><td></td><td></td><td></td></tr>
+      <tr><td>Stump grinding</td><td></td><td></td><td></td></tr>
+      <tr><td>Land clearing / debris haul-away</td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="totals">
+    <p>Subtotal $________</p>
+    <p>Tax $________</p>
+    <p><strong>Total $________</strong></p>
+  </div>
+  <p>Payment: Cash / Check / Card &nbsp; Last 4: ____</p>
+  <div class="sign">
+    <p>Customer signature</p>
+    <p>Authorized representative, Tree Rescue 24</p>
+  </div>
+  <footer>Thank you for choosing Tree Rescue 24. 24/7 dispatch (813) 595-7373. Google verification address: 30836 Temple Stand Ave, Wesley Chapel, FL 33543.</footer>
+</body>
+</html>

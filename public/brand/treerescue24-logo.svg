@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Tree Rescue 24</title>
+  <desc id="desc">24/7 emergency tree service logo for Tree Rescue 24 in Tampa and Wesley Chapel, Florida.</desc>
+  <defs>
+    <path id="topArc" d="M 180,390 A 332,332 0 0 1 844,390" />
+  </defs>
+  <circle cx="512" cy="512" r="500" fill="#0B3D2E" />
+  <circle cx="512" cy="512" r="478" fill="none" stroke="#FF6A00" stroke-width="36" />
+  <circle cx="512" cy="512" r="430" fill="none" stroke="#F5C518" stroke-width="8" />
+  <text fill="#F6F1E8" font-family="Arial Black, Impact, sans-serif" font-size="72" font-weight="700" letter-spacing="8">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">TREE RESCUE</textPath>
+  </text>
+  <g fill="#F6F1E8">
+    <path d="M512 250c-28 62-108 128-138 208 48-22 82-14 138 18 56-32 90-40 138-18-30-80-110-146-138-208z" />
+    <path d="M430 448c-72 28-128 78-150 128 68-12 126 6 232 48 106-42 164-60 232-48-22-50-78-100-150-128-42 28-74 38-164 0z" />
+    <rect x="486" y="530" width="52" height="210" rx="6" fill="#3A2415" />
+  </g>
+  <path d="M536 268 386 548h92l-46 150 248-292h-98z" fill="#FF6A00" />
+  <path d="M390 760h244l36 70H354z" fill="#06261C" stroke="#FF6A00" stroke-width="14" />
+  <text x="512" y="818" text-anchor="middle" fill="#F5C518" font-family="Arial Black, Impact, sans-serif" font-size="84" font-weight="700">24</text>
+  <text x="210" y="560" fill="#FF6A00" font-family="Arial Black, sans-serif" font-size="36" font-weight="700">24/7</text>
+  <text x="814" y="540" text-anchor="middle" fill="#FF6A00" font-family="Arial, sans-serif" font-size="22" font-weight="700">
+    <tspan x="814" dy="0">EMERGENCY</tspan>
+    <tspan x="814" dy="26">TREE SERVICE</tspan>
+  </text>
+</svg>
