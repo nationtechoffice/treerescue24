@@ -56,6 +56,7 @@ export function localBusinessGraph() {
           latitude: business.geo.latitude,
           longitude: business.geo.longitude,
         },
+        openingHours: business.openingHours,
         openingHoursSpecification: {
           "@type": "OpeningHoursSpecification",
           dayOfWeek: [
