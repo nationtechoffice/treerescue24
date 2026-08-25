@@ -26,22 +26,21 @@ Premier 24/7 emergency tree service, tree removal, and land care for Tampa, Wesl
 
 Set `GOOGLE_SITE_VERIFICATION` for Search Console HTML-tag verification.
 
-## Brand assets
+## Offline print images (not on the website)
 
-Print-ready files live in `public/brand/` and preview at `/brand-assets`.
+PNG files for Google verification, receipts, cards, and truck magnets live in `print-assets/` and are **not** served on treerescue24.com.
+
+- `print-assets/treerescue24-logo.png`
+- `print-assets/treerescue24-logo.svg`
+- `print-assets/treerescue24-receipt.png`
+- `print-assets/treerescue24-business-card.png`
+- `print-assets/treerescue24-magnetic-sign.png`
+
+Regenerate:
 
 ```bash
-npm run generate:assets
+npm run generate:print-images
 ```
-
-Outputs:
-
-- `treerescue24-logo.svg` / `treerescue24-logo.png`
-- `receipt-template.html` (US Letter)
-- `business-card.html` (3.5 × 2 in)
-- `magnetic-sign.html` (24 × 12 in)
-
-Canvas PNG export is available on the business card and magnetic sign pages.
 
 ## Development
 

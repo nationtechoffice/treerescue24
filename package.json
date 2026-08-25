@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate:assets": "node scripts/generate-brand-assets.mjs"
+    "generate:print-images": "node scripts/generate-print-images.mjs"
   },
   "dependencies": {
     "next": "16.3.2",

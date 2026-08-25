@@ -71,9 +71,6 @@ export function Footer() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/brand-assets" className="hover:text-gold">
-              Brand assets
-            </Link>
           </nav>
         </div>
       </div>

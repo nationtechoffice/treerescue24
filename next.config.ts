@@ -34,6 +34,31 @@ const nextConfig: NextConfig = {
         destination: "/emergency-tree-removal",
         permanent: false,
       },
+      {
+        source: "/brand-assets",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/brand-assets/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/brand/receipt-template.html",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/brand/business-card.html",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/brand/magnetic-sign.html",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
